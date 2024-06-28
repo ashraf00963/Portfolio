@@ -1,0 +1,64 @@
+/* Welcome.css */
+.welcome-page {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.welcome-content {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutToBottom {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+.welcome-h1 {
+    font-size: 5rem;
+    position: relative;
+}
+
+.journey {
+    color: #00ffff;
+    display: inline-block;
+    width: 310px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.journey.enter {
+    animation: slideInFromTop 0.2s forwards;
+}
+
+.journey.exit {
+    animation: slideOutToBottom 0.2s forwards;
+}
