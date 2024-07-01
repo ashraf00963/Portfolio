@@ -1,5 +1,7 @@
+@import url('../../fonts/fonts.css');
+
 .projects-page {
-    width: 100%;
+    width: 97.6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,16 +17,19 @@
     height: 600px;
     width: 900px;
     position: absolute;
+    margin-top: 0.2rem;
+    margin-left: 0.3rem;
 }
 
 .projects-project {
+    position: relative;
     width: 848px;
     height: 451px;
     margin-top: 1.05rem;
     margin-left: 1.7rem;
 }
 
-.ntl-ifraem {
+.ntl-iframe {
     width: inherit;
     height: inherit;
     position: relative;
@@ -34,18 +39,109 @@
 
 .projects-project-btns {
     margin: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     position: relative;
     z-index: 10;
 }
 
 .info-btn, .github-btn, .next-ch-btn, .prev-ch-btn {
-    border: 1px solid #000;
-    background-color: #383838;
+    border: none;
+    background-color: #181c23;
     color: #fff; 
     margin-left: 1rem;
     padding-top: 5px;
-    box-shadow: 0px 2px 2px 2px #000;
+    box-shadow: 0px 0px 5px 2px #000;
+    cursor: pointer;
+}
+
+.info-btn:active, .github-btn:active, .next-ch-btn:active, .prev-ch-btn:active {
+    box-shadow: none;
+}
+
+/* info popup styles */
+.info-popup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure this is above the iframe */
+    top: 0.3%;
+    left: 0.1%;
+}
+
+.info-content {
+    width: 380px;
+    height: 302px;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #00ff0d;
+    background-color: #000;
+    font-family: "Belanosima", sans-serif;
+}
+
+.info-content-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0.5rem 0;
+}
+
+.info-content-name-p {
+    font-family: 'ModeSeven', sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    align-self: flex-end;
+    margin-bottom: 0.2rem;
+}
+
+.info-content-info {
+    margin: 0;
+    font-family: 'ModeSeven', sans-serif;
+    line-height: 25px;
+    font-size: 1rem;
+    letter-spacing: 0px;
+}
+
+.braces {
+    font-size: 2rem;
+    align-self: flex-start;
+}
+
+/* tv styles */
+.transition {
+    animation: tvStatic 0.3s linear;
+}
+
+@keyframes tvStatic {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        background: repeating-linear-gradient(0deg, #fff, #fff 1px, #000 2px, #000 2px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.channel-name-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    background-color: #000000d2;
+    color: #00ff0d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'ModeSeven', sans-serif;
+    font-size: 1.5rem;
+    z-index: 3;
+    
 }

@@ -14,8 +14,8 @@ function Welcome() {
                 setText(words[index]);
                 setAnimate('enter');
                 index = (index + 1) % words.length;
-            }, 100); // Match this time with the exit animation duration
-        }, 200); // Adjust this time to match the desired effect
+            }, 100);
+        }, 200); 
 
         const timeoutId = setTimeout(() => {
             clearInterval(intervalId);
@@ -23,8 +23,8 @@ function Welcome() {
             setTimeout(() => {
                 setText('Journey');
                 setAnimate('enter');
-            }, 100); // Match this time with the exit animation duration
-        }, 3000); // Adjust this time to match the desired effect
+            }, 100); 
+        }, 3000); 
 
         return () => {
             clearInterval(intervalId);

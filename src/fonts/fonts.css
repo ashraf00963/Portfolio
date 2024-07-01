@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'ModeSeven';
+    src: url('./Modeseven-L3n5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ModeSeven';
+    src: url('./Modeseven-L3n5.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
