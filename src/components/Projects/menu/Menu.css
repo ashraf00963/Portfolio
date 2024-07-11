@@ -133,8 +133,71 @@
 @media screen and (max-width: 750px) {
     .tv-menu {
         z-index: 1000;
-        width: 91%;
-        top: 0;
-        left: 30px;
+        width: 90.6%;
+        top: -2px;
+        left: 32px;
+    }
+
+    .menu-items {
+        margin: 0 2rem;
+        height: fit-content;
+    }
+    .channel-navi-info {
+        height: fit-content;
+    }
+
+    .info-content {
+        width: auto;
+        height: auto;
+    }
+
+    .info-content-info {
+        line-height: normal;
+    }
+
+    .navigation-list {
+        min-height: 300px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .tv-menu {
+        left: 26px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .tv-menu {
+        left: 23px;
+    }
+
+    .info-content-name-p {
+        font-size: 1rem;
+    }
+
+    .info-content-info {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .tv-menu {
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .tv-menu {
+        left: 18px;
+        top: -0.05px;
+    }
+
+    .menu-items {
+        width: 100%;
+    }
+
+    .navigation-help {
+        flex-wrap: wrap;
     }
 }
