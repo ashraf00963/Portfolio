@@ -73,6 +73,15 @@
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 @keyframes blink-caret {
     from, to {
         border-color: transparent;
@@ -116,5 +125,32 @@
     }
     100% {
         border-image-source: linear-gradient(45deg, #ff6ec4, #7873f5, #4adeff, #21bdbf, #ff6ec4, #7873f5);
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .tv-intro-text {
+        white-space: wrap;
+    }
+
+    .animate-typing {
+        animation: fadeIn 3s forwards;
+        border: none;
+    }
+
+    .animate-deleting {
+        animation: fadeOut 3s forwards;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tv-intro-container {
+        padding: 0;
+    }
+
+    .animate-projects {
+        margin: 1rem auto;
+        font-size: 2rem;
     }
 }

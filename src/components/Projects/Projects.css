@@ -6,16 +6,17 @@
     justify-content: center;
     align-items: center;
     margin: 1rem;
+    margin-bottom: 0;
 }
 
 .projects-content {
-    width: 900px;
-    height: 600px;
+    width: 1200px;
+    height: 800px;
 }
 
 .tv-frame {
-    height: 600px;
-    width: 900px;
+    height: 800px;
+    width: 1200px;
     position: absolute;
     margin-top: 0.2rem;
     margin-left: 0.3rem;
@@ -23,8 +24,8 @@
 
 .projects-project {
     position: relative;
-    width: 848px;
-    height: 451px;
+    width: 1138px;
+    height: 611px;
     margin-top: 1.05rem;
     margin-left: 1.7rem;
 }
@@ -54,6 +55,10 @@
     padding-top: 5px;
     box-shadow: 0px 0px 5px 2px #000;
     cursor: pointer;
+}
+
+.info-btn {
+    margin-top: 0.2rem;
 }
 
 .info-btn:active, .github-btn:active, .next-ch-btn:active, .prev-ch-btn:active {
@@ -132,6 +137,25 @@
     }
 }
 
+@keyframes boxShadowMoveIpad {
+    0% {
+        box-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #D4AF37, 0 0 40px #FF0000, 0 0 50px #008000;
+    }
+    25% {
+        box-shadow: 0 0 10px #FF0000, 0 0 20px #008000, 0 0 30px #FFFFFF, 0 0 40px #D4AF37, 0 0 50px #FFFFFF;
+    }
+    50% {
+        box-shadow: 0 0 10px #008000, 0 0 20px #FFFFFF, 0 0 30px #D4AF37, 0 0 40px #FF0000, 0 0 50px #FFFFFF;
+    }
+    75% {
+        box-shadow: 0 0 10px #D4AF37, 0 0 20px #FF0000, 0 0 30px #008000, 0 0 40px #FFFFFF, 0 0 50px #D4AF37;
+    }
+    100% {
+        box-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #D4AF37, 0 0 40px #FF0000, 0 0 50px #008000;
+    }
+}
+
+
 .channel-name-overlay {
     position: absolute;
     top: 40px;
@@ -144,4 +168,145 @@
     font-size: 1.5rem;
     z-index: 3;
     
+}
+
+
+@media screen and (max-width: 1170px) {
+    .projects-content {
+        width: 950px;
+    }
+
+    .tv-frame {
+        width: 950px;
+    }
+
+    .projects-project {
+        width: 894px;
+    }
+}
+
+
+@media screen and (max-width: 940px) {
+    .projects-content {
+        width: 750px;
+        height: 600px;
+    }
+
+    .tv-frame {
+        width: 750px;
+        height: 600px;
+    }
+
+    .projects-project {
+        width: 700px;
+        height: 448px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .projects-page {
+        margin: 0;
+        width: 100%;
+    }
+
+    .projects-content {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .projects-project {
+        height: 800px;
+        width: auto;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+
+    .tv-frame {
+        display: none;
+    }
+
+    .ntl-iframe {
+        width: 90%;
+        animation: boxShadowMoveIpad 4s infinite linear;
+        border: none;
+        border-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border: 4px solid #000;
+        z-index: 100;
+    }
+
+
+    .projects-project-btns {
+       flex-direction: column;
+       align-items: center;
+       margin: 0;
+
+    }
+
+    .info-btn {
+        width: fit-content;
+        padding: 10px 15px;
+        padding-top: 12px;
+        margin-bottom: 1rem;
+        margin-top: 0.6rem;
+        background-color: #00000073;
+        border: 1px solid #000;
+        border-radius: 10%;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .channel-navi-btns {
+        position: absolute;
+        width: 87%;
+        margin-left: -0rem;
+        padding: 0.4rem 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff70;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 4px solid #000;
+        border-top: 1px solid #000;
+    }
+
+    .prev-ch-btn {
+        padding: 10px 15px;
+        padding-top: 12px;
+        background-color: #00000073;
+        border: 1px solid  #000;
+        border-radius: 10%;
+        margin: 0;
+        margin-top: 0.2rem;
+        
+    }
+
+    .next-ch-btn {
+        padding: 10px 15px;
+        padding-top: 12px;
+        background-color: #00000073;
+        border: 1px solid  #000;
+        border-radius: 10%;
+        margin: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .projects-project {
+        height: 600px;
+    }
+
+    .channel-navi-btns {
+        width: 85.5%;
+    }
+
+    .projects-project-btns {
+        margin-bottom: 3rem;
+    }
 }

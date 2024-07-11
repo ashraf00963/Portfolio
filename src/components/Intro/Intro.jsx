@@ -9,6 +9,7 @@ function Intro() {
         const nameElement = document.querySelector('.intro-info h3');
         const titleElement = document.querySelector('.intro-info h2');
         const paragraph = document.querySelector('.intro-info p');
+        const profElement = document.querySelector('.prof'); // Add this line
         const introPage = document.querySelector('.intro-page');
 
         const handleScroll = () => {
@@ -45,6 +46,12 @@ function Intro() {
                 nameElement.classList.add('visible');
             } else {
                 nameElement.classList.remove('visible');
+            }
+
+            if (scrollPosition > introPageTop + 150) {
+                profElement.classList.add('visible'); 
+            } else {
+                profElement.classList.remove('visible'); 
             }
 
             if (scrollPosition > introPageTop + 250) {

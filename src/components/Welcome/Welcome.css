@@ -44,6 +44,7 @@
 .welcome-h1 {
     font-size: 5rem;
     position: relative;
+    text-align: center;
 }
 
 .journey {
@@ -61,4 +62,18 @@
 
 .journey.exit {
     animation: slideOutToBottom 0.2s forwards;
+}
+
+@media screen and (max-width: 1200px) {
+    .journey {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .welcome-h1 {
+        font-size: 3rem;
+        margin: 0 1rem;
+    }
 }
